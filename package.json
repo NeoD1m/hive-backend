@@ -1,5 +1,7 @@
 {
-  "scripts" : { "starts": "node index.js"},
+  "scripts" : { 
+    "start": "node index.js"
+  },
   "name": "ws-backend",
   "version": "1.0.0",
   "main": "index.js",
