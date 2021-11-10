@@ -7,12 +7,7 @@ let clients = [];
 const colors = ['blue', 'red', 'green', 'yellow'];
 
 const httpServer = http.createServer(() => { });
-httpServer.listen(5000, () => { });
-
-var pport = process.env.PORT || 5000;
-httpServer.listen(pport, function(err) {
-    if(!err) { console.log("Listening on port " + pport); }
-});
+httpServer.listen(443, () => { });
 
 const wsServer = new WebSocketServer({ httpServer });
 
