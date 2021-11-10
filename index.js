@@ -9,6 +9,11 @@ const colors = ['blue', 'red', 'green', 'yellow'];
 const httpServer = http.createServer(() => { });
 httpServer.listen(5000, () => { });
 
+var pport = process.env.PORT || 5000;
+httpServer.listen(pport, function(err) {
+    if(!err) { console.log("Listening on port " + pport); }
+});
+
 const wsServer = new WebSocketServer({ httpServer });
 
 wsServer.on('request', request => {
