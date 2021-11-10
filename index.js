@@ -4,7 +4,7 @@ const http = require('http');
 let history = [];
 let clients = [];
 
-const colors = ['blue', 'red', 'green', 'yellow'];
+const colors = ['blue', 'red', 'green', 'yellow', 'purple'];
 
 const httpServer = http.createServer(() => { });
 httpServer.listen(443, () => { });
@@ -30,7 +30,7 @@ wsServer.on('request', request => {
             // first message sent by user is their name
             if (!userName) {
                 userName = message.utf8Data;
-                userColor = colors[Math.floor(Math.random() * 4)];
+                userColor = colors[Math.floor(Math.random() * 5)];
 
                 connection.sendUTF(JSON.stringify({ type: 'color', data: userColor }));
                 console.log(`${new Date()} User is known as: ${userName} with ${userColor} color.`);
