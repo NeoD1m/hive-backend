@@ -7,7 +7,7 @@ let clients = [];
 const colors = ['blue', 'red', 'green', 'yellow', 'purple'];
 
 const httpServer = http.createServer(() => { });
-httpServer.listen(443, () => { });
+httpServer.listen(80, () => { });
 
 const wsServer = new WebSocketServer({ httpServer });
 
